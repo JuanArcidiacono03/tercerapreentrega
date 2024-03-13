@@ -1,0 +1,31 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Equipos de la Liga Profesional</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Equipos</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in equipo %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    
+   
+
+
+    

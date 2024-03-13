@@ -1,0 +1,27 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Tabla de Goleadores</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Goleadores</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in goleador %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.apellido }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
